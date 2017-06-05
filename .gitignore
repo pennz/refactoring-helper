@@ -131,3 +131,4 @@ tests/*.sh.trs
 tests/*.tap
 checkmk/*.log
 checkmk/test/*.log
+
