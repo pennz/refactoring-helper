@@ -1,4 +1,10 @@
 # copied from check's source file
+
+TODO:
+  Analysis:
+    1. call outside the file, out side the folder, the count and the ratio.
+    2. the data structure of the souce codes, which contains the infomation about the structure of the source codes.
+
 This is the "money example" from the Check tutorial.
 
 This demonstrates using Check along with one of two build systems:
