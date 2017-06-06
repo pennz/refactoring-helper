@@ -1,3 +1,18 @@
+/**
+ * A syntax for creating a module (similar to that of Modula) would be:
+ *
+ * DEFINITION MODULE foo
+ * EXPORT list of functions and data
+ * declarations of exported functions
+ * and data
+ * END foo
+ * IMPLEMENTATION MODULE foo
+ * IMPORT list of modules used
+ * ... code ...
+ * END foo
+ *
+ *
+ */
 #include <stdlib.h>
 #include "counter.h"
 
