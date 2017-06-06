@@ -12,7 +12,43 @@ START_TEST(test_counter_create)
 	counter_free(counter);
 }
 END_TEST
+START_TEST(test_generate_tree_1_file)// one then two or more
+{
 
+}
+END_TEST
+START_TEST(test_layer_count)
+{
+
+}
+END_TEST
+START_TEST(test_stat_per_file)// add fixture to generate tree first// per module
+{
+
+}
+END_TEST
+
+//START_TEST(test_)
+//{
+//
+//}
+//END_TEST
+/* test_dot_out
+ * test_png_out
+ *
+ * test_find_node
+ * test_tree_init
+ * test_tree_free
+ *
+ * test_generate_as_module
+ *
+ * test_struct_flow
+ * test_call_paras
+ *
+ * test_header_and_implementation
+ *
+ * test_function_line_count
+ */
 Suite * preparation_suite(void); // could put to a seperate file
 Suite * dot_suite(void);
 
