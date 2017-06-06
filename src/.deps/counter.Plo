@@ -11,7 +11,7 @@ counter.lo: counter.c /usr/include/stdc-predef.h /usr/include/stdlib.h \
  /usr/include/bits/select.h /usr/include/bits/sigset.h \
  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h counter.h
+ /usr/include/bits/stdlib-float.h counter.h calltree.h func_info.h
 
 /usr/include/stdc-predef.h:
 
@@ -66,3 +66,7 @@ counter.lo: counter.c /usr/include/stdc-predef.h /usr/include/stdlib.h \
 /usr/include/bits/stdlib-float.h:
 
 counter.h:
+
+calltree.h:
+
+func_info.h:

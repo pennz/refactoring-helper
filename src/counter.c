@@ -15,6 +15,8 @@
  */
 #include <stdlib.h>
 #include "counter.h"
+#include "calltree.h"
+#include "func_info.h"
 
 struct Counter
 {
