@@ -6,7 +6,7 @@ AC_INIT([Coder], [0.1], [check-devel AT lists.sourceforge.net])
 AM_PROG_AR
 
 # unique source file --- primitive safety check 
-AC_CONFIG_SRCDIR([src/counter.c])
+AC_CONFIG_SRCDIR([src/parser/counter.c])
 
 # fairly severe build strictness
 # change foreign to gnu or gnits to comply with gnu standards

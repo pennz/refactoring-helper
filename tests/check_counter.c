@@ -12,16 +12,30 @@ START_TEST(test_counter_create)
 	counter_free(counter);
 }
 END_TEST
+
+START_TEST(test_build_tree)// one then two or more
+{
+	// build the simplest one first
+	char *cscope_file_name = prepare_cscope_file(project_folder);
+	Calltree t = parse_cscope_file(cscope_file_name); // just parse with the default parameters, should add configuration later
+	// TODO: add configure structure
+	ck_assert_int_eq(tree_depth(t), 3);
+	ck_assert_int_eq(tree_nodes_count(t), 3);
+}
+END_TEST
+
 START_TEST(test_generate_tree_1_file)// one then two or more
 {
 
 }
 END_TEST
+
 START_TEST(test_layer_count)
 {
 
 }
 END_TEST
+
 START_TEST(test_stat_per_file)// add fixture to generate tree first// per module
 {
 
@@ -36,22 +50,42 @@ END_TEST
 /* test_dot_out
  * test_png_out
  *
- * test_find_node
+ * test_find_node // node can be function, file, module, thus, the tree can represent different abstract layers.
  * test_tree_init
  * test_tree_free
  *
  * test_generate_as_module
  *
  * test_struct_flow
- * test_call_paras
+ * test_call_paras, - get stats about arguments--output, could be different color
  *
  * test_header_and_implementation
  *
- * test_function_line_count
+ * test_function_line_count// need to read the file, the cscope does not do this
+ *
+ * test_encap_module // the underlying structure, module, file
  */
 Suite * preparation_suite(void); // could put to a seperate file
-Suite * dot_suite(void);
+Suite * fileIO_suite(void); // could put to a seperate file
+Suite * dot_suite(void);// need add fixture, test file, delete file or something
 
+Suite * preparation_suite(void)
+{
+	Suite *s;
+
+	TCase *tc_builder;
+
+
+	s = suite_create("Prepare");
+
+	/* Core test case */
+	tc_builder = tcase_create("build_tree");
+	tcase_add_test(tc_builder, test_build_tree);
+
+	suite_add_tcase(s, tc_builder);
+
+	return s;
+}
 //	TCase *tc_generate_report; // put into relating suites!!
 //	TCase *tc_prepare_database;
 //	TCase *tc_analysis;	// analysis the layer structure, get the parameters
@@ -73,7 +107,7 @@ Suite * counter_suite(void)
 }
 static void add_additional_suites(SRunner *sr)
 {
-//srunner_add_suite (sr, preparation_suite);
+	srunner_add_suite (sr, preparation_suite());
 //srunner_add_suite (sr, dot_suite);
 }
 int main(void)
