@@ -1,0 +1,11 @@
+The main modules: (Pay attention to the interfaces)
+    viewer: Use xdot,graphviz to show the call tree. (Use function point to act as abstract interface)
+    treefy tool(code to call tree)/spider: walks the c files, and get the underlying relations. (use cscope and other things, cscope is weak in variable)
+
+   grader/ analyzer: analyze based on the underlying structure.
+
+    filter: how to do this?? filter what you want to see. Filter what you want to see.
+As the viewer just a passive screen? the **presenter** handle the logic
+
+https://www.linux-apps.com/content/show.php?content=9890
+Maybe later can integrate kcachegrind, show the runtime info
