@@ -1,1 +1,4 @@
 get states of the global variables
+ or the static variable(inside a module)
+
+The Tlist plugin in vim may be could help
