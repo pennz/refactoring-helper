@@ -134,3 +134,4 @@ checkmk/test/*.log
 
 #image files
 *.png
+src/cscope-15.8b
